@@ -35,11 +35,12 @@ img.center {
 
 .search-form-container {
     width: 42%;
-    height: 10%;
+    height: 5%;
     max-height: 10%;
     border: 0px;
     display: inline-block;
     margin: 0 auto;
+    padding-bottom: 0px;
     color: #3a3a3a;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
@@ -48,8 +49,8 @@ img.center {
 .search-form {
     font-size:  18px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 83%;
-    height: 35px;
+    width: 84%;
+    height: 30px;
     background-color: #222222;
     /*background-color: black;*/
     color: #b2b2b2;
