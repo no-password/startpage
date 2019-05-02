@@ -1,10 +1,54 @@
 conwayBoard = null;
+searchProviders = {
+    "google":'http://www.google.com/search?q=',
+    "images":'http://www.images.google.com/search?q=',
+    "wikipedia":'https://en.wikipedia.org/wiki/'
+};
+currentSearchProvider = 0;
+
+/** 
+ * Queries google
+*/
+function search(q)
+{
+    search_url = searchProviders[Object.keys(searchProviders)[currentSearchProvider]] + q;
+    window.open(search_url, "_blank");
+    window.close();
+}
+
+/** 
+ * Sumbits form when enter key is pressed
+*/
+function checkSubmit(e) {
+    if(e && e.keyCode == 13) {
+       document.forms[0].submit();
+    }
+ }
 
 /**
  * Sets interval timer for running Conwya's game of life
  */
-function runConway() {
-    setInterval(conway, 200);
+function setupPage() {
+    setInterval(conway, 100);
+    populateSearchProviderList();
+}
+
+function populateSearchProviderList() {
+    const searchProviderNames = Object.keys(searchProviders);
+    document.getElementById("search-provider").innerHTML = searchProviderNames[currentSearchProvider];
+    var listHTML = "";
+    for (var i = 0; i < searchProviderNames.length; i++) {
+        if (i != currentSearchProvider) {
+            listHTML += "<a onclick=\"setNewSearchProvider(" + i + ")\">" + searchProviderNames[i] + "</a>"
+        }
+    }
+
+    document.getElementById("search-dropdown-list").innerHTML = listHTML;
+}
+
+function setNewSearchProvider(provider) {
+    currentSearchProvider = provider;
+    populateSearchProviderList();
 }
 
 /**

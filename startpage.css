@@ -41,6 +41,7 @@ img.center {
     display: inline-block;
     margin: 0 auto;
     padding-bottom: 0px;
+    margin-bottom: 0px;
     color: #3a3a3a;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
@@ -56,15 +57,16 @@ img.center {
     color: #b2b2b2;
     border-color: #222222;
     border: 0px;
+    margin-bottom: 0px;
 }
 
 hr { 
     display: block;
     margin-top: 0px;
-    margin-bottom: 0.5em;
-    width: 40%;
+    margin-bottom: 0px;
+    width: 42%;
     border-style: inset;
-    border-width: 1px;
+    border-width: 0px;
     color: #3a3a3a;
     background-color: #3a3a3a;
     height: 4px;
