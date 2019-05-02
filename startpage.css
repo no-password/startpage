@@ -1,0 +1,19 @@
+html, body {
+    background-color: #222222;
+    /* Height and width fallback for older browsers. */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+head {
+    margin: 0;
+    height: 0%;
+    max-height: 0%;
+}
+
+p {
+    font-size: 12px;
+    font-family: monospace;
+    color: #f8f8f8;
+}
