@@ -40,7 +40,7 @@ function conway() {
      */
     function firstRun() {
         conway.w = Math.floor(window.outerWidth / conway.fontsize) - 4;
-        conway.h = Math.floor(window.outerHeight / conway.fontsize / 5);
+        conway.h = Math.floor(window.outerHeight / conway.fontsize / 6);
 
         conwayBoard = [];
         for (var i = 0; i < conway.w; i += 1) {
