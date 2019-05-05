@@ -16,6 +16,13 @@ function search(q)
     window.close();
 }
 
+function getSearchSuggestions() {
+    $.get("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%3D%22http%3A%2F%2Fsuggestqueries.google.com%2Fcomplete%2Fsearch%3Fclient%3Dfirefox%26q%3D" + encodeURIComponent("obama") + "%22&format=json", function(responseText) {
+        alert(responseText);
+    });
+    console.log("done!");
+}
+
 /** 
  * Sumbits form when enter key is pressed
 */
@@ -31,6 +38,8 @@ function checkSubmit(e) {
 function setupPage() {
     setInterval(conway, 100);
     populateSearchProviderList();
+    document.getElementById("search-form").focus();
+    getSearchSuggestions();
 }
 
 function populateSearchProviderList() {

@@ -5,7 +5,7 @@
     <head>
         <link rel="stylesheet" href="startpage.css">
     </head>
-    <body onload="setupPage()"><pre><script src="startpage.js"></script></pre>
+    <body onload="setupPage()"><pre><script src="startpage.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script></pre>
         <div class=".top-anim">
             <p id="conway"></p>
         </div>
@@ -15,7 +15,7 @@
             <br>
             <br>
             <form class="search-form-container autofocus" onKeyPress="return checkSubmit(event)" onsubmit="return search(q.value)">
-                <b>>></b>&nbsp;&nbsp;&nbsp;<input type="text" name="q" class="search-form">
+                <b>>></b>&nbsp;&nbsp;&nbsp;<input type="text" name="q" class="search-form" id="search-form">
                 <div class="dropdown">
                     <button class="dropbutton" id="search-provider"></button>
                     <div class="dropdown-content" id="search-dropdown-list">
