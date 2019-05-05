@@ -39,6 +39,7 @@ function setupPage() {
     setInterval(conway, 100);
     populateSearchProviderList();
     document.getElementById("search-form").focus();
+    document.getElementById("search-form").autofocus = true;
     getSearchSuggestions();
 }
 
